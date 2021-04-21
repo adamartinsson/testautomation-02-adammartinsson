@@ -1,5 +1,6 @@
 {
 	"compilerOptions": {
+		"allowJs": true,
 		"target": "esnext",
 		"module": "esnext",
 		"strict": false,
@@ -12,7 +13,8 @@
 		"sourceMap": true,
 		"baseUrl": ".",
 		"types": [
-			"webpack-env"
+			"webpack-env",
+			"cypress"
 		],
 		"paths": {
 			"@/*": [
