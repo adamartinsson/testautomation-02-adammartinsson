@@ -26,6 +26,7 @@
 		"@vue/cli-plugin-babel": "^4.2.0",
 		"@vue/cli-plugin-typescript": "^4.2.0",
 		"@vue/cli-service": "^4.2.0",
+		"cypress": "^7.1.0",
 		"node-sass": "^4.12.0",
 		"nodemon": "^2.0.2",
 		"sass-loader": "^8.0.2",
