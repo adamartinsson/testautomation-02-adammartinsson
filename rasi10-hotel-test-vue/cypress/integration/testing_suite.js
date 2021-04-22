@@ -1,9 +1,22 @@
 /// <reference types="Cypress" />
 
+import * as loginFunctions from '../integration/loginPage'
+import * as targets from '../targets/targets'
+import * as overviewFunctions from '../integration/overviewPage'
 
-describe('initial test', () => {
-    it('Verifies that the site is up and running', () => {
-        cy.visit('http://localhost:3000/')
-        cy.contains('Tester Hotel')
+describe('Test Suite', function() {
+    beforeEach(() => {
+        cy.visit(targets.baseURL)
+        loginFunctions.checkTitle(cy)
     })
+    
+
+
+
+
+
+it('Full Login test', function(){
+    loginFunctions.testFullLogin(cy, targets.username1, targets.password1, 'Tester Hotel Overview')
+})
+
 })
