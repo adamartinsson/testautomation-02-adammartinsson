@@ -9,5 +9,9 @@ module.exports = {
 
     //user 2
     username2: 'tester02',
-    password2: 'sppm7qncqmVft5uECkwjLcLdEJGzM3Cw'
+    password2: 'sppm7qncqmVft5uECkwjLcLdEJGzM3Cw',
+
+    //failed user login
+    usernameFail: 'aaa',
+    passwordFail: 'aaa'
 }
