@@ -28,7 +28,7 @@ it('Logout test', function(){
     loginFunctions.logout()
 })
 
-it.only('Create Room test', function(){
+it('Create Room test', function(){
     overviewFunctions.createRoom()
 })
 

@@ -5,6 +5,9 @@ const subTitle = 'Tester Hotel Overview'
 const backButtonText = 'Back'
 const createRoomText = 'Create Room'
 
+//Testing values
+const num1 = '1'
+const num500 = '500'
 
 //New Room page
 const newRoomTitle = 'New Room'
@@ -51,15 +54,17 @@ function createRoom() {
     cy.get(':nth-child(1) > select').select('Single')
     cy.get(':nth-child(1) > select').select('Twin')
     //use const input data here instead?
-    cy.get(':nth-child(2) > input').type('1')
-    cy.get(':nth-child(3) > input').type('1')
+    cy.get(':nth-child(2) > input').type(num1)
+    cy.get(':nth-child(3) > input').type(num1)
     cy.get('.checkbox').click()
-    cy.get(':nth-child(5) > input').type('500')
+    cy.get(':nth-child(5) > input').type(num500)
     cy.get(':nth-child(6) > select').select([value="balcony", "ensuite", "sea_view", "penthouse"])
     cy.get('.blue').click()
-    
+    cy.get(':nth-child(1) > :nth-child(2) > h3').contains('Floor 1, Room 1')
+    cy.get(':nth-child(1) > :nth-child(2) > .category').contains('twin')
+    cy.get(':nth-child(1) > :nth-child(2) > .available').contains('Available: true')
+    cy.get(':nth-child(1) > :nth-child(2) > .price').contains('Price: 500kr')
 
-   
 }
 
 function deleteRoom(){
