@@ -1,6 +1,6 @@
 module.exports = {
     baseURL: 'http://localhost:3000/login', 
-    overviewURL: 'http://localhost:3000',
+    overviewURL: 'http://localhost:3000/',
 
 
     //user 1
@@ -13,5 +13,11 @@ module.exports = {
 
     //failed user login
     usernameFail: 'aaa',
-    passwordFail: 'aaa'
+    passwordFail: 'aaa',
+
+    //usable variable data
+    sampleEmail: 'Email@email.email',
+    sampleName: 'Adam',
+    samplePhone: '123456789'
+
 }

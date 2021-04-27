@@ -19,23 +19,23 @@ const rooms = [
 	{
 		id: 1,
 		created: new Date('2020-01-03T12:00:00Z'),
-		category: 'double',
+		category: 'twin',
 		floor: 1,
-		number: 101,
+		number: 1,
 		available: true,
-		price: 1500,
+		price: 500,
 		features: [
-			'balcony', 'ensuite'
+			'balcony', 'sea_view', 'ensuite'
 		]
 	},
 	{
 		id: 2,
 		created: new Date('2020-01-04T12:00:00Z'),
-		category: 'double',
+		category: 'twin',
 		floor: 1,
-		number: 102,
+		number: 1,
 		available: true,
-		price: 2000,
+		price: 500,
 		features: [
 			'balcony', 'sea_view', 'ensuite'
 		]
