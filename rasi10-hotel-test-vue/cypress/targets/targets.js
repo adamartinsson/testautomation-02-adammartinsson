@@ -15,9 +15,10 @@ module.exports = {
     usernameFail: 'aaa',
     passwordFail: 'aaa',
 
-    //usable variable data
+    //clients sample data
     sampleEmail: 'Email@email.email',
     sampleName: 'Adam',
     samplePhone: '123456789'
-
+    
+    
 }

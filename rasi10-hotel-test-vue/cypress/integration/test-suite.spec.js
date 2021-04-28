@@ -7,6 +7,19 @@ import * as roomsFunctions from '../pages/roomsPage.js'
 import * as newRoomFunctions from '../pages/newRoomPage.js'
 import * as clientsFunctions from '../pages/clientsPage.js'
 import * as newClientFunctions from '../pages/newClientPage.js'
+import * as billsFunctions from '../pages/billsPage.js'
+import * as editBillsFunctions from '../pages/editBillPage.js'
+
+//create room values
+const category = 'twin'
+const number =  '1'
+const floor = '1'
+const price = '500'
+const features = 'balcony'
+
+//bills values
+
+const newValue = '500'
 
 describe('Test Suite', function() {
     beforeEach(() => {
@@ -17,35 +30,42 @@ describe('Test Suite', function() {
     })
 
     
-it('Failed Login Test', function(){
+it('Tests Failed Login', function(){
     indexFunctions.logout()
     loginFunctions.testFailLogin(cy, targets.usernameFail, targets.passwordFail, 'Bad username or password')
 })
 
-it('Successful Login test', function(){
+it('Test Successful Login', function(){
     indexFunctions.logout()
     loginFunctions.testFullLogin(cy, targets.username1, targets.password1, 'Tester Hotel Overview')
 })
 
-it('Logout Test', function(){
+it('Tests Logout', function(){
     indexFunctions.logout()
 })
 
 
-it('Create, Verify, and Delete room', function(){
+it('Creates, Verifies, and Deletes room', function(){
     indexFunctions.viewRooms()
     roomsFunctions.clickCreateRoom()
-    newRoomFunctions.newRoom('twin', '1', '1', '500', ["balcony", "ensuite", "sea_view", "penthouse"])
-    roomsFunctions.verifyRoom()
+    newRoomFunctions.newRoom(category, number, floor, price, features)
+    roomsFunctions.verifyRoom(category, number, floor, price, features)
     roomsFunctions.deleteRoom()
 })
 
-it('Create, Verify, and Delete client', function(){
+it('Creates, Verifies, and Deletes client', function(){
     indexFunctions.viewClients()
     clientsFunctions.clickCreateClient()
     newClientFunctions.newClient(targets.sampleName, targets.sampleEmail, targets.samplePhone)
     clientsFunctions.verifyClient()
     clientsFunctions.deleteClient()
+})
+
+it.only('Edits an Existing Bill', function(){
+    indexFunctions.viewBills()
+    billsFunctions.clickEditBill()
+    editBillsFunctions.editBill(newValue)
+    billsFunctions.verifyEditedBill(newValue)
 })
 
 

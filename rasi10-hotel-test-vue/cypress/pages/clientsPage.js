@@ -4,9 +4,11 @@ import * as targets from '../targets/targets'
 
 const clientMenu = ':nth-child(3) > .action'
 const deleteButton = '.menu > :nth-child(2)'
+const createClientButtonText = 'Create Client'
+const clientBox = '.client'
 
 function clickCreateClient(){
-    cy.contains('Create Client').click()
+    cy.contains(createClientButtonText).click()
 }
 
 function deleteClient(){
@@ -15,7 +17,7 @@ function deleteClient(){
 }
 
 function verifyClient(){
-    cy.get('.client').last().should('contain', targets.sampleName).and('contain', targets.sampleEmail).and('contain', targets.samplePhone)
+    cy.get(clientBox).last().should('contain', targets.sampleName).and('contain', targets.sampleEmail).and('contain', targets.samplePhone)
 }
 
 module.exports = {

@@ -2,30 +2,33 @@
 
 const backButtonText = 'Back'
 const createRoomText = 'Create Room'
-const mainTitle = 'Tester Hotel'
+const subHeader = 'h2'
 const subTitle = 'Rooms'
-const greetingsMessage = 'Welcome tester01!'
+const ellipsesMenu = ':nth-child(3) > .action'
+const ellipsesMenuDelete = '.menu > :nth-child(2)'
+const roomBox = '.room'
 
 function clickCreateRoom(){
-    cy.get('h1').contains(mainTitle)
-    cy.get('h2').contains(subTitle)
-    cy.contains(greetingsMessage)
+    cy.get(subHeader).contains(subTitle)
     cy.contains(backButtonText)
     cy.contains(createRoomText).click()
 }
 
 function deleteRoom(){
-    cy.get('h1').contains(mainTitle)
-    cy.get('h2').contains(subTitle)
-    cy.get(':nth-child(3) > .action').click()
-    cy.get('.menu > :nth-child(2)').click()
+    cy.get(subHeader).contains(subTitle)
+    cy.contains(backButtonText)
+    cy.get(ellipsesMenu).click()
+    cy.get(ellipsesMenuDelete).click()
 }
 
-function verifyRoom(){
-    cy.get('.room').last().should('contain', 'Floor 1, Room 1').and('contain', 'twin').and('contain', 'balcony').and('contain', 'ensuite').and('contain', 'sea view').and('contain', 'penthouse')
+function verifyRoom(category, number, floor, price, features){
+    cy.get(roomBox).last()
+    .should('contain', category)
+    .and('contain', number)
+    .and('contain', floor)
+    .and('contain', price)
+    .and('contain', features)
 }
-
-
 
 module.exports = {
     clickCreateRoom,

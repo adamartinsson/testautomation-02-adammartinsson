@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
-//should probably move all default/non-login items to a separate page (like pagetitle, checktitle func)
 
 const pageTitle = 'Testers Hotel'
+const subHeader = 'h2'
 const subTitle = 'Login'
 const usernameField = ':nth-child(1) > input'
 const passwordField = ':nth-child(2) > input'
@@ -14,7 +14,7 @@ function checkTitle(cy) {
 }
 
 function testFullLogin(cy, username, password, verify) {
-    cy.get('h2').contains(subTitle)
+    cy.get(subHeader).contains(subTitle)
     cy.get(loginButton).contains(loginButtonText)
     cy.get(usernameField).type(username)
     cy.get(passwordField).type(password)
@@ -23,7 +23,7 @@ function testFullLogin(cy, username, password, verify) {
 } 
 
 function testFailLogin(cy, username, password, verify){
-    cy.get('h2').contains(subTitle)
+    cy.get(subHeader).contains(subTitle)
     cy.get(loginButton).contains(loginButtonText)
     cy.get(usernameField).type(username)
     cy.get(passwordField).type(password)
