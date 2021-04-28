@@ -23,6 +23,7 @@ const newValue = '500'
 
 describe('Test Suite', function() {
     beforeEach(() => {
+        cy.log('test')
         cy.visit(targets.baseURL)
         loginFunctions.checkTitle(cy)
         indexFunctions.logout()
