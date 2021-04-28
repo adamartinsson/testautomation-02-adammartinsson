@@ -62,7 +62,7 @@ it('Creates, Verifies, and Deletes client', function(){
     clientsFunctions.deleteClient()
 })
 
-it.only('Edits an Existing Bill', function(){
+it('Edits an Existing Bill', function(){
     indexFunctions.viewBills()
     billsFunctions.clickEditBill()
     editBillsFunctions.editBill(newValue)

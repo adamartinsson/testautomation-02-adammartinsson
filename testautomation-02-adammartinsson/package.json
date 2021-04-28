@@ -7,7 +7,10 @@
 		"build": "vue-cli-service build",
 		"lint": "vue-cli-service lint",
 		"dev": "nodemon index.js",
-		"start": "node index.js"
+		"start": "node index.js",
+		"cypress:open": "cypress open",
+		"cypress:run": "cypress run --reporter mochawesome --headless --browser chrome"
+		
 	},
 	"dependencies": {
 		"body-parser": "^1.19.0",
@@ -15,7 +18,6 @@
 		"cors": "^2.8.5",
 		"express": "^4.17.1",
 		"ts-md5": "^1.2.7",
-		"vue": "^2.6.11",
 		"vue-class-component": "^7.2.2",
 		"vue-property-decorator": "^8.3.0",
 		"vue-router": "^3.1.5",
@@ -26,11 +28,19 @@
 		"@vue/cli-plugin-babel": "^4.2.0",
 		"@vue/cli-plugin-typescript": "^4.2.0",
 		"@vue/cli-service": "^4.2.0",
+		"@vue/compiler-sfc": "^3.0.0-beta.14",
 		"cypress": "^7.1.0",
+		"fibers": "^5.0.0",
+		"mocha": "^5.2.0",
+		"mochawesome": "^6.2.2",
+		"mochawesome-merge": "^4.2.0",
+		"mochawesome-report-generator": "^5.2.0",
 		"node-sass": "^4.12.0",
 		"nodemon": "^2.0.2",
+		"sass": "^1.3.0",
 		"sass-loader": "^8.0.2",
 		"typescript": "~3.7.5",
+		"vue": "^3.0.0-beta.14",
 		"vue-template-compiler": "^2.6.11"
 	}
 }
