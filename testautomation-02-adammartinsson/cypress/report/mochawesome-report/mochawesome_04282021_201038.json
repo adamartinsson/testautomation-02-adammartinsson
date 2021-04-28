@@ -1,0 +1,210 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 4,
+    "pending": 0,
+    "failures": 2,
+    "start": "2021-04-28T18:09:56.480Z",
+    "end": "2021-04-28T18:10:38.444Z",
+    "duration": 41964,
+    "testsRegistered": 6,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "daa935ec-e7f1-4846-ba3b-3907721b1426",
+      "title": "",
+      "fullFile": "cypress/integration/test-suite.spec.js",
+      "file": "cypress/integration/test-suite.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a167dfec-ae2a-42ed-9daa-2bb8a1dae801",
+          "title": "Test Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Tests Failed Login",
+              "fullTitle": "Test Suite Tests Failed Login",
+              "timedOut": null,
+              "duration": 10251,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "indexFunctions.logout();\nloginFunctions.testFailLogin(cy, targets.usernameFail, targets.passwordFail, 'Bad username or password');\ncy.percySnapshot();",
+              "err": {},
+              "uuid": "37fecd0a-55d8-4e8c-aed9-fb3733d9e19b",
+              "parentUUID": "a167dfec-ae2a-42ed-9daa-2bb8a1dae801",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test Successful Login",
+              "fullTitle": "Test Suite Test Successful Login",
+              "timedOut": null,
+              "duration": 6010,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "indexFunctions.logout();\nloginFunctions.testFullLogin(cy, targets.username1, targets.password1, 'Tester Hotel Overview');\ncy.percySnapshot();",
+              "err": {},
+              "uuid": "ef8e7a69-051c-4b22-b632-cea224f99a8a",
+              "parentUUID": "a167dfec-ae2a-42ed-9daa-2bb8a1dae801",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Tests Logout",
+              "fullTitle": "Test Suite Tests Logout",
+              "timedOut": null,
+              "duration": 2718,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "indexFunctions.logout();",
+              "err": {},
+              "uuid": "cc7969f9-38e7-4fa2-a3b2-7e2337a44bbe",
+              "parentUUID": "a167dfec-ae2a-42ed-9daa-2bb8a1dae801",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Creates, Verifies, and Deletes room",
+              "fullTitle": "Test Suite Creates, Verifies, and Deletes room",
+              "timedOut": null,
+              "duration": 2237,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "indexFunctions.viewRooms();\nroomsFunctions.clickCreateRoom();\nnewRoomFunctions.newRoom(category, number, floor, price, features);\nroomsFunctions.verifyRoom(category, number, floor, price, features);\npercySnapshot();\nroomsFunctions.deleteRoom();",
+              "err": {
+                "message": "ReferenceError: percySnapshot is not defined",
+                "estack": "ReferenceError: percySnapshot is not defined\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress\\integration\\test-suite.spec.js:184:5)",
+                "diff": null
+              },
+              "uuid": "7a835c25-5302-4273-80dd-95a9eceba221",
+              "parentUUID": "a167dfec-ae2a-42ed-9daa-2bb8a1dae801",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Creates, Verifies, and Deletes client",
+              "fullTitle": "Test Suite Creates, Verifies, and Deletes client",
+              "timedOut": null,
+              "duration": 6530,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "indexFunctions.viewClients();\nclientsFunctions.clickCreateClient();\nnewClientFunctions.newClient(targets.sampleName, targets.sampleEmail, targets.samplePhone);\nclientsFunctions.verifyClient();\ncy.percySnapshot();\nclientsFunctions.deleteClient();",
+              "err": {},
+              "uuid": "1c976c9a-11ae-43d4-adec-f97f7249bd97",
+              "parentUUID": "a167dfec-ae2a-42ed-9daa-2bb8a1dae801",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Edits an Existing Bill",
+              "fullTitle": "Test Suite Edits an Existing Bill",
+              "timedOut": null,
+              "duration": 7575,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "indexFunctions.viewBills();\nbillsFunctions.clickEditBill();\neditBillsFunctions.editBill(newValue);\ncy.percySnapshot();\nbillsFunctions.verifyEditedBill(newValue);",
+              "err": {
+                "message": "CypressError: `cy.then()` timed out after waiting `4000ms`.\n\nYour callback function returned a promise that never resolved.\n\nThe callback function was:\n\ndom => {\n      let domSnapshot = window.PercyDOM.serialize({ ...options, dom });\n\n      // Post the DOM snapshot to Percy\n      return utils.postSnapshot({\n        ...options,\n        environmentInfo: ENV_INFO,\n        clientInfo: CLIENT_INFO,\n        domSnapshot,\n        url: dom.URL,\n        name\n      }).then(() => {\n        // Log the snapshot name on success\n        cylog(name, { name });\n      }).catch(error => {\n        // Handle errors\n        log.error(`Could not take DOM snapshot \"${name}\"`);\n        log.error(error);\n      });\n    }\n\nhttps://on.cypress.io/then",
+                "estack": "CypressError: `cy.then()` timed out after waiting `4000ms`.\n\nYour callback function returned a promise that never resolved.\n\nThe callback function was:\n\ndom => {\n      let domSnapshot = window.PercyDOM.serialize({ ...options, dom });\n\n      // Post the DOM snapshot to Percy\n      return utils.postSnapshot({\n        ...options,\n        environmentInfo: ENV_INFO,\n        clientInfo: CLIENT_INFO,\n        domSnapshot,\n        url: dom.URL,\n        name\n      }).then(() => {\n        // Log the snapshot name on success\n        cylog(name, { name });\n      }).catch(error => {\n        // Handle errors\n        log.error(`Could not take DOM snapshot \"${name}\"`);\n        log.error(error);\n      });\n    }\n\nhttps://on.cypress.io/then\n    at http://localhost:3000/__cypress/runner/cypress_runner.js:135511:24\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:10747:23)\n    at http://localhost:3000/__cypress/runner/cypress_runner.js:5869:41\n    at tryCatcher (http://localhost:3000/__cypress/runner/cypress_runner.js:10747:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3000/__cypress/runner/cypress_runner.js:8682:31)\n    at Promise._settlePromise (http://localhost:3000/__cypress/runner/cypress_runner.js:8739:18)\n    at Promise._settlePromise0 (http://localhost:3000/__cypress/runner/cypress_runner.js:8784:10)\n    at Promise._settlePromises (http://localhost:3000/__cypress/runner/cypress_runner.js:8860:18)\n    at _drainQueueStep (http://localhost:3000/__cypress/runner/cypress_runner.js:5454:12)\n    at _drainQueue (http://localhost:3000/__cypress/runner/cypress_runner.js:5447:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:5463:5)\n    at Async.drainQueues (http://localhost:3000/__cypress/runner/cypress_runner.js:5333:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress\\support\\index.js:201:40)",
+                "diff": null
+              },
+              "uuid": "0d8aaf95-d5ca-4afb-8f25-ecf6792eb03f",
+              "parentUUID": "a167dfec-ae2a-42ed-9daa-2bb8a1dae801",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "37fecd0a-55d8-4e8c-aed9-fb3733d9e19b",
+            "ef8e7a69-051c-4b22-b632-cea224f99a8a",
+            "cc7969f9-38e7-4fa2-a3b2-7e2337a44bbe",
+            "1c976c9a-11ae-43d4-adec-f97f7249bd97"
+          ],
+          "failures": [
+            "7a835c25-5302-4273-80dd-95a9eceba221",
+            "0d8aaf95-d5ca-4afb-8f25-ecf6792eb03f"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 35321,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

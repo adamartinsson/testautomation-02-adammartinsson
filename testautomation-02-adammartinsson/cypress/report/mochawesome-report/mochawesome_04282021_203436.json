@@ -1,0 +1,201 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-04-28T18:33:53.627Z",
+    "end": "2021-04-28T18:34:36.932Z",
+    "duration": 43305,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "17396086-7423-4c20-a1bd-51e8304e20fd",
+      "title": "",
+      "fullFile": "cypress/integration/test-suite.spec.js",
+      "file": "cypress/integration/test-suite.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4907662d-fd4c-43a3-9548-d28f93d7be25",
+          "title": "Test Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Tests Failed Login",
+              "fullTitle": "Test Suite Tests Failed Login",
+              "timedOut": null,
+              "duration": 10267,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "indexFunctions.logout();\nloginFunctions.testFailLogin(cy, targets.usernameFail, targets.passwordFail, 'Bad username or password');\ncy.wait(1000).percySnapshot();",
+              "err": {},
+              "uuid": "fd89ba0e-6aa1-4b72-8942-6a06cb4f4264",
+              "parentUUID": "4907662d-fd4c-43a3-9548-d28f93d7be25",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test Successful Login",
+              "fullTitle": "Test Suite Test Successful Login",
+              "timedOut": null,
+              "duration": 8462,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "indexFunctions.logout();\nloginFunctions.testFullLogin(cy, targets.username1, targets.password1, 'Tester Hotel Overview');\ncy.wait(1000).percySnapshot();",
+              "err": {},
+              "uuid": "37cf29a7-d247-42d2-8014-9b027bc04fa4",
+              "parentUUID": "4907662d-fd4c-43a3-9548-d28f93d7be25",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Tests Logout",
+              "fullTitle": "Test Suite Tests Logout",
+              "timedOut": null,
+              "duration": 3205,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "indexFunctions.logout();",
+              "err": {},
+              "uuid": "d56d99ba-ed00-45bf-9742-7b4515da844a",
+              "parentUUID": "4907662d-fd4c-43a3-9548-d28f93d7be25",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Creates, Verifies, and Deletes room",
+              "fullTitle": "Test Suite Creates, Verifies, and Deletes room",
+              "timedOut": null,
+              "duration": 3955,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "indexFunctions.viewRooms();\nroomsFunctions.clickCreateRoom();\nnewRoomFunctions.newRoom(category, number, floor, price, features);\nroomsFunctions.verifyRoom(category, number, floor, price, features);\nroomsFunctions.deleteRoom();",
+              "err": {},
+              "uuid": "8967aa57-4bd4-4e98-9a97-4cadf24e4a5d",
+              "parentUUID": "4907662d-fd4c-43a3-9548-d28f93d7be25",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Creates, Verifies, and Deletes client",
+              "fullTitle": "Test Suite Creates, Verifies, and Deletes client",
+              "timedOut": null,
+              "duration": 5732,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "indexFunctions.viewClients();\nclientsFunctions.clickCreateClient();\nnewClientFunctions.newClient(targets.sampleName, targets.sampleEmail, targets.samplePhone);\nclientsFunctions.verifyClient();\ncy.wait(1000).percySnapshot();\nclientsFunctions.deleteClient();",
+              "err": {},
+              "uuid": "c650a844-57e6-44ef-b12e-eee56b4c1068",
+              "parentUUID": "4907662d-fd4c-43a3-9548-d28f93d7be25",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Edits an Existing Bill",
+              "fullTitle": "Test Suite Edits an Existing Bill",
+              "timedOut": null,
+              "duration": 4616,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "indexFunctions.viewBills();\nbillsFunctions.clickEditBill();\neditBillsFunctions.editBill(newValue);\ncy.wait(1000).percySnapshot();\nbillsFunctions.verifyEditedBill(newValue);",
+              "err": {},
+              "uuid": "079432d7-a094-4a83-9b0e-af8e81ccd045",
+              "parentUUID": "4907662d-fd4c-43a3-9548-d28f93d7be25",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fd89ba0e-6aa1-4b72-8942-6a06cb4f4264",
+            "37cf29a7-d247-42d2-8014-9b027bc04fa4",
+            "d56d99ba-ed00-45bf-9742-7b4515da844a",
+            "8967aa57-4bd4-4e98-9a97-4cadf24e4a5d",
+            "c650a844-57e6-44ef-b12e-eee56b4c1068",
+            "079432d7-a094-4a83-9b0e-af8e81ccd045"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 36237,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

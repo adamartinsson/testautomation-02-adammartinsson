@@ -34,6 +34,7 @@ function logout() {
     cy.get('body').then(($body) => {
         if ($body.text().includes(loggedInMessage)) {
             cy.get(logOutButton).click()
+            cy.wait(500)
         }
     
 })

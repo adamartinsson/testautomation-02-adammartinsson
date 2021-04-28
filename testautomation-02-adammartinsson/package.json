@@ -9,8 +9,8 @@
 		"dev": "nodemon index.js",
 		"start": "node index.js",
 		"cypress:open": "cypress open",
-		"cypress:run": "cypress run --reporter mochawesome --headless --browser chrome"
-		
+		"cypress:run": "cypress run --reporter mochawesome --headless --browser chrome",
+		"test:vrt": "percy exec cypress run --browser chrome --headless --spec cypress/integration/test-suite.spec.js "
 	},
 	"dependencies": {
 		"body-parser": "^1.19.0",
@@ -23,8 +23,12 @@
 		"vue-router": "^3.1.5",
 		"vuex": "^3.1.2",
 		"vuex-persist": "^2.2.0"
+
 	},
 	"devDependencies": {
+		"@percy/cli": "^1.0.0-beta.48",
+		"@percy/cypress": "^3.1.0",
+		"@percy/puppeteer": "^2.0.0",
 		"@vue/cli-plugin-babel": "^4.2.0",
 		"@vue/cli-plugin-typescript": "^4.2.0",
 		"@vue/cli-service": "^4.2.0",
