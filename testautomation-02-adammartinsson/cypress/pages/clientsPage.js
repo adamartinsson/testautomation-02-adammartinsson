@@ -17,7 +17,10 @@ function deleteClient(){
 }
 
 function verifyClient(){
-    cy.get(clientBox).last().should('contain', targets.sampleName).and('contain', targets.sampleEmail).and('contain', targets.samplePhone)
+    cy.get(clientBox).last()
+        .should('contain', targets.sampleName)
+        .and('contain', targets.sampleEmail)
+        .and('contain', targets.samplePhone)
 }
 
 module.exports = {
