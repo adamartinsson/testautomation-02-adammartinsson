@@ -28,5 +28,5 @@ mochawesome-report
 
 # test videos & screenshots
 
-videos
+*.mp4
 screenshots
