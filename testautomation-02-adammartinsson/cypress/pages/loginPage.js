@@ -8,10 +8,13 @@ const passwordField = ':nth-child(2) > input'
 const loginButtonText = 'Login'
 const loginButton = '.btn'
 
-//checks title of each page, not limited to loginfunctions only
+//checks title of each page
+
 function checkTitle(cy) {
     cy.title().should('eq', pageTitle)
 }
+
+//full login test and verification with valid credentials
 
 function testFullLogin(cy, username, password, verify) {
     cy.get(subHeader).contains(subTitle)
@@ -21,6 +24,8 @@ function testFullLogin(cy, username, password, verify) {
     cy.get(loginButton).click()
     cy.contains(verify) 
 } 
+
+//full login test and verification with invalid credentials
 
 function testFailLogin(cy, username, password, verify){
     cy.get(subHeader).contains(subTitle)

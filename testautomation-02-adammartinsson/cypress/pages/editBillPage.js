@@ -7,6 +7,8 @@ const valueInput = ':nth-child(3) > input'
 const saveButton = '.blue'
 const backButtonText = 'Back'
 
+//edits first bill, clearing field from default and changing value
+
 function editBill(newValue){
     cy.get(subHeader).contains(subTitle)
     cy.contains(backButtonText)

@@ -25,3 +25,8 @@ node_modules
 # test reports
 
 mochawesome-report
+
+# test videos & screenshots
+
+videos
+screenshots

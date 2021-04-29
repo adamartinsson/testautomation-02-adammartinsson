@@ -8,6 +8,8 @@ const price_input = ':nth-child(5) > input'
 const features_input = ':nth-child(6) > select'
 const save_input = '.blue'
 
+//creates new room
+
 function newRoom(category, number, floor, price, features) {
     cy.get(category_input).select(category)
     cy.get(number_input).type(number)

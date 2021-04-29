@@ -8,6 +8,8 @@ const backButtonText = 'Back'
 const billsBox = '.bill'
 const firstBill = 'ID: 1'
 
+//opens menu to edit first bill in list
+
 function clickEditBill(){
     cy.get(subHeader).contains(subTitle)
     cy.contains(backButtonText)
@@ -15,6 +17,8 @@ function clickEditBill(){
     cy.get(ellipsesMenu).click()
     cy.get(ellipsesMenuEdit).click()
 }
+
+//verifies elements of first bill in list
 
 function verifyEditedBill(newValue){
     cy.get(subHeader).contains(subTitle)

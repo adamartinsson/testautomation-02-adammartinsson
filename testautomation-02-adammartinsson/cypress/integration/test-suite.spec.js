@@ -1,5 +1,7 @@
 /// <reference types="Cypress" />
 
+//importing functions
+
 import * as targets from '../targets/targets'
 import * as loginFunctions from '../pages/loginPage'
 import * as indexFunctions from '../pages/indexPage'
@@ -18,8 +20,9 @@ const price = '500'
 const features = 'balcony'
 
 //bills values
-
 const newValue = '500'
+
+//beforeEach verifies page, resets login-state, then logs in
 
 describe('Test Suite', function() {
     beforeEach(() => {
@@ -29,7 +32,8 @@ describe('Test Suite', function() {
         loginFunctions.testFullLogin(cy, targets.username1, targets.password1, 'Tester Hotel Overview')
     })
 
-    
+//Login and logout tests
+
 it('Tests Failed Login', function(){
     indexFunctions.logout()
     loginFunctions.testFailLogin(cy, targets.usernameFail, targets.passwordFail, 'Bad username or password')
@@ -46,6 +50,7 @@ it('Tests Logout', function(){
     indexFunctions.logout()
 })
 
+//Rooms test
 
 it('Creates, Verifies, and Deletes room', function(){
     indexFunctions.viewRooms()
@@ -56,6 +61,8 @@ it('Creates, Verifies, and Deletes room', function(){
     roomsFunctions.deleteRoom()
 })
 
+//Clients test
+
 it('Creates, Verifies, and Deletes client', function(){
     indexFunctions.viewClients()
     clientsFunctions.clickCreateClient()
@@ -64,6 +71,8 @@ it('Creates, Verifies, and Deletes client', function(){
     cy.wait(1000).percySnapshot()
     clientsFunctions.deleteClient()
 })
+
+//Bills test
 
 it('Edits an Existing Bill', function(){
     indexFunctions.viewBills()

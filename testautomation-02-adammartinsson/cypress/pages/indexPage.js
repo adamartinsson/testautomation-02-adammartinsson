@@ -27,7 +27,7 @@ const reservationsTitle = 'Reservations'
 const reservationsHeader = ':nth-child(4) > h4'
 const reservationsViewButton = '.blocks > :nth-child(4) > .btn'
 
-
+//basic logout function
 
 function logout() {
     
@@ -39,6 +39,8 @@ function logout() {
     
 })
 }
+
+//redirecting functions
 
 function viewRooms() {
     
@@ -71,7 +73,6 @@ function viewReservations() {
     cy.get(reservationsViewButton).click()
 
 }
-
 
 module.exports = {
     logout,
