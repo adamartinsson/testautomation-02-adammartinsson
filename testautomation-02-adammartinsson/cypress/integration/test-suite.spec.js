@@ -14,13 +14,13 @@ import * as editBillsFunctions from '../pages/editBillPage.js'
 
 //create room values
 const category = 'twin'
-const number =  '1'
-const floor = '1'
-const price = '500'
+const number =  targets.sampleRoomNumber
+const floor = targets.sampleFloorNumber
+const price = targets.sampleRoomPrice
 const features = 'balcony'
 
 //bills values
-const newValue = '500'
+const newValue = targets.sampleBillsPrice
 
 //beforeEach verifies page, resets login-state, then logs in
 

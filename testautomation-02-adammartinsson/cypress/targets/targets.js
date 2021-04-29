@@ -1,3 +1,13 @@
+const faker = require('faker');
+
+let generatedFirstName = faker.name.firstName();
+let generatedEmail = faker.internet.email();
+let generatedPhone = faker.phone.phoneNumber();
+let generatedFloorNumber = faker.datatype.number();
+let generatedRoomNumber = faker.datatype.number();
+let generatedRoomPrice = faker.datatype.number();
+let generatedBillsValue = faker.datatype.number();
+
 module.exports = {
     baseURL: 'http://localhost:3000/login', 
     overviewURL: 'http://localhost:3000/',
@@ -16,9 +26,15 @@ module.exports = {
     passwordFail: 'aaa',
 
     //clients sample data
-    sampleEmail: 'Email@email.email',
-    sampleName: 'Adam',
-    samplePhone: '123456789'
+    sampleEmail: generatedEmail,
+    sampleName: generatedFirstName,
+    samplePhone: generatedPhone,
+
+    //generated values for faker
+    sampleFloorNumber: generatedFloorNumber,
+    sampleRoomNumber: generatedRoomNumber,
+    sampleRoomPrice: generatedRoomPrice,
     
+    sampleBillsPrice: generatedBillsValue
     
 }
